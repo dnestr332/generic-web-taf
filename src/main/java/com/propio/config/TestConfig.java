@@ -24,25 +24,25 @@ import javax.sql.DataSource;
 })
 public class TestConfig {
 
-    @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
-        String url = EnvConfig.get("DB_URL");
-        String user = EnvConfig.get("DB_USER");
-        String password = EnvConfig.get("DB_PASSWORD");
-
-        dataSource.setUrl(url);
-        dataSource.setUsername(user);
-        dataSource.setPassword(password);
-
-        return dataSource;
-    }
-
-    @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
-        return new JdbcTemplate(dataSource);
-    }
+//    @Bean
+//    public DataSource dataSource() {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//
+//        String url = EnvConfig.get("DB_URL");
+//        String user = EnvConfig.get("DB_USER");
+//        String password = EnvConfig.get("DB_PASSWORD");
+//
+//        dataSource.setUrl(url);
+//        dataSource.setUsername(user);
+//        dataSource.setPassword(password);
+//
+//        return dataSource;
+//    }
+//
+//    @Bean
+//    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+//        return new JdbcTemplate(dataSource);
+//    }
 
     @Bean(destroyMethod = "")
     public Playwright playwright() {

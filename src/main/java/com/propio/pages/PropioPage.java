@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum PropioPage {
 
-    LOGIN("login");
+    LOGIN("login"),
+    LANDING("home");
 
     private final String path;
 }

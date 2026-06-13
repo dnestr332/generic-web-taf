@@ -4,8 +4,6 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import com.propio.actions.ElementActions;
-import com.propio.enums.states.VisibleState;
-import com.propio.utils.WaitUtils;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -44,15 +42,6 @@ public abstract class BasePage {
         validate(field);
         Locator locator = locator(field);
         elementActions.typeWithKeyboard(locator, text);
-    }
-
-    public boolean isMessageVisible(String text, VisibleState state) {
-        if (state == VisibleState.NOT_VISIBLE) {
-            WaitUtils.sleepSeconds(3);
-            return byText(text).isHidden();
-        } else {
-            return elementActions.text(byText(text)).startsWith(text);
-        }
     }
 
     private void validate(PageElement element) {

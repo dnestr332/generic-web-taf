@@ -22,7 +22,7 @@ public final class EnvContext {
 
     public static boolean isCi() {
         return Boolean.parseBoolean(
-                System.getProperty("ci", ConfigReader.getProperty("ci"))
+                System.getProperty("CI", ConfigReader.getProperty("CI"))
         );
     }
 }

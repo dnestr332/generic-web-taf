@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "target/rerun.txt",
+        features = "@target/rerun.txt",
         glue = {
                 "com.propio.steps",
                 "com.propio.steps.hooks",

@@ -2,7 +2,7 @@
 <suite name="Propio Failed Suite" verbose="1" parallel="false">
     <test name="Cucumber Tests">
         <classes>
-            <class name="com.propio.runners.TestNgFailedRunner"/>
+            <class name="com.generic.runners.TestNgFailedRunner"/>
         </classes>
     </test>
 </suite>
